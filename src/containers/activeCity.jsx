@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 
 // eslint-disable-next-line react/prefer-stateless-function
 class ActiveCity extends Component {
@@ -7,10 +8,14 @@ class ActiveCity extends Component {
       <div className="active-city">
         <h2>City Name</h2>
         <p>Adress</p>
-        <img src="" alt="" srcSet="" />
+        {/* <img src={`https://kitt.lewagon.com/placeholder/cities/${slug}`} alt="" /> */}
       </div>
     );
   }
 }
 
-export default ActiveCity;
+function mapStateToProps(state) {
+  return { selectedCity: state.selectedCity };
+}
+
+export default connect(mapStateToProps)(ActiveCity);

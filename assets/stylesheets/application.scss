@@ -10,6 +10,9 @@ body {
   .cities {
     width: 30%;
     height: calc(100vh - 40px);
+    .selected {
+      border: 1px solid orangered;
+    }
   }
   .active-city {
     width: 70%;
@@ -28,4 +31,5 @@ body {
   cursor: pointer;
   border: 1px solid #ddd;
   border-radius: 4px;
+  overflow: scroll;
 }
