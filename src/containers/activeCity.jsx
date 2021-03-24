@@ -16,7 +16,9 @@ class ActiveCity extends Component {
       <div className="active-city">
         <h2>{name}</h2>
         <p>{address}</p>
-        <img src={imageUrl} alt={name} />
+        <div className="img">
+          <img src={imageUrl} alt={name} />
+        </div>
       </div>
     );
   }

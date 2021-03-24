@@ -7,9 +7,9 @@ body {
 .app {
   margin: 20px;
   display: flex;
+  height: calc(100vh - 40px);
   .cities {
     width: 30%;
-    height: calc(100vh - 40px);
   }
   .active-city {
     display: flex;
@@ -21,12 +21,18 @@ body {
     padding: 10px 15px;
     border: 1px solid #ddd;
     border-radius: 4px;
+    height: auto;
+    overflow: auto;
     h2 {
       margin-top: 0;
     }
+    .img {
+      float: right;
+      height: auto;
+    }
     img {
       max-width: 100%;
-      height: auto;
+      margin: 5px;
     }
   }
 }
@@ -41,9 +47,19 @@ body {
     justify-content: center;
     align-items: center;
     cursor: pointer;
+    margin: 2px 0;
     border: 1px solid transparent;
+    border-radius: 4px;
+    p {
+      margin: 5px 0;
+    }
+    &:hover {
+      border: 1px solid orangered;
+    }
   }
   .selected {
     border: 1px solid orangered;
+    background-color: orangered;
+    color: black;
   }
 }
