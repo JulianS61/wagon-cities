@@ -8,7 +8,7 @@ function setCities() {
   };
 }
 
-function selectCity() {
+function selectCity(city) {
   return {
     type: "SELECT_CITY",
     payload: city,
